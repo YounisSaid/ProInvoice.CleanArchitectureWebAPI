@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ProInvoice.CleanArchitectureWebAPI.API/ProInvoice.CleanArchitectureWebAPI.API.csproj" />
+    <Project Path="src/ProInvoice.CleanArchitectureWebAPI.Application/ProInvoice.CleanArchitectureWebAPI.Application.csproj" />
+    <Project Path="src/ProInvoice.CleanArchitectureWebAPI.Domain/ProInvoice.CleanArchitectureWebAPI.Domain.csproj" />
+    <Project Path="src/ProInvoice.CleanArchitectureWebAPI.Infrastructure/ProInvoice.CleanArchitectureWebAPI.Infrastructure.csproj" />
+  </Folder>
+</Solution>

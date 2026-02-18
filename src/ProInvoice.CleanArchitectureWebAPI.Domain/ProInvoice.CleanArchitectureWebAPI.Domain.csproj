@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Abstraction\" />
+    <Folder Include="Entities\Customers\" />
+    <Folder Include="Entities\Invoices\" />
+    <Folder Include="Entities\InvoiceItems\" />
+    <Folder Include="Entities\Shared\" />
+    <Folder Include="Entities\Products\" />
+  </ItemGroup>
+
+</Project>
