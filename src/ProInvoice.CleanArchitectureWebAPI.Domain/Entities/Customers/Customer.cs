@@ -22,15 +22,15 @@ namespace ProInvoice.CleanArchitectureWebAPI.Domain.Entities.Customers
         public Money Balance { get; private set; } = null!;
 
         // Invoice Here Search_Later 
-        public static Customer Create(CreateCustomerDto customerDto)
+        public static Customer Create(CreateCustomerDto request)
         {
             var customer = new Customer(
-                                        new Address(customerDto.FirstLineAddress,
-                                        customerDto.SecondLineAddress,
-                                        customerDto.PostCode,
-                                        customerDto.City,
-                                        customerDto.Country),
-                                        new Title(customerDto.Title),
+                                        new Address(request.FirstLineAddress,
+                                        request.SecondLineAddress,
+                                        request.PostCode,
+                                        request.City,
+                                        request.Country),
+                                        new Title(request.Title),
                                         new Money(0));
 
             customer.RaiseDomainEvents(new CustomerCreatedDomainEvent(customer.ID));
@@ -38,6 +38,16 @@ namespace ProInvoice.CleanArchitectureWebAPI.Domain.Entities.Customers
             return customer;
         }
 
+        public void Update(UpdateCustomerDto request)
+        {
+            Address = new Address(request.FirstLineAddress,
+                                        request.SecondLineAddress,
+                                        request.PostCode,
+                                        request.City,
+                                        request.Country);
+            Title = new Title(request.Title);
+
+        }
 
     }
 }
